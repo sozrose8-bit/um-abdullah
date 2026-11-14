@@ -3,6 +3,7 @@
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1453860539585755');
+fbq('init','2143384842934794');
 fbq('track','PageView');
 fbq('track','ViewContent',{content_name:'Menu'});
 document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var href=a.getAttribute('href')||'';if(!href.startsWith('https://wa.me/966552710211'))return;var card=a.closest('article');var name=card?card.querySelector('h3').textContent:'General inquiry';var price=a.closest('.prices > div');var size=price?price.querySelector('small').textContent.split('·')[0].trim():'';var data={content_name:name,content_category:'WhatsApp',order_size:size};fbq('track','Contact',data);fbq('trackCustom','WhatsAppClick',data);},true);
